@@ -7,7 +7,7 @@ var {User} = require('./models/user');
 
 var app = express();
 
-// midleware we need to give to epxress is the return value of bodyParser.json
+// return value of bodyParser.json is the midleware we need to give to epxress
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res)=> {
@@ -26,3 +26,5 @@ app.post('/todos', (req, res)=> {
 app.listen(3000, ()=>{
   console.log('Started on port 3000');
 });
+
+module.exports = {app};
